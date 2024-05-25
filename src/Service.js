@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classes from './service.module.css';
 import Header from './header'; 
 import Footers from './Footer';
+import InquiryForm from './Inquiry';
 import p1 from './abc.jpg';
 import p2 from './r1.jpg';
 import p3 from './r2.jpg';
@@ -25,12 +26,14 @@ import s3 from './ppl2.jpg';
 import s4 from './ppl3.jpg';
 
 function ServicesPage() {
+  
+
   return (
     <div className={classes.container}>
       <Header /> 
       <div className={classes.hero}>
         <img src={p1} className={classes.heroImage} alt="Hero" />
-        <div className={classes.heroText}>NN Engineers</div>
+        <div className={classes.heroText}> Our services</div>
       </div>
       
       <div className={classes.services}>
@@ -90,33 +93,34 @@ function ServicesPage() {
           </div>
         </div>
       </div>
-
       <div className={classes.testimonials}>
-        <h2>Testimonials</h2>
-        <div className={classes.testimonialGrid}>
-          <div className={classes.testimonialItem}>
-            <img src={s1} alt="Person" className={classes.testimonialImage} />
-            <p className={classes.testimonialName}>John Doe</p>
-            <p className={classes.testimonialComment}>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-          </div>
-          <div className={classes.testimonialItem}>
-            <img src={s2} alt="Person" className={classes.testimonialImage} />
-            <p className={classes.testimonialName}>Jane Smith</p>
-            <p className={classes.testimonialComment}>"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-          </div>
-          <div className={classes.testimonialItem}>
-            <img src={s3} alt="Person" className={classes.testimonialImage} />
-            <p className={classes.testimonialName}>Alice Johnson</p>
-            <p className={classes.testimonialComment}>"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-          </div>
-          <div className={classes.testimonialItem}>
-            <img src={s4} alt="Person" className={classes.testimonialImage} />
-            <p className={classes.testimonialName}>Bob Brown</p>
-            <p className={classes.testimonialComment}>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
-          </div>
-        </div>
-      </div>
-      < Footers />
+  <h2>Testimonials</h2>
+  <div className={classes.testimonialGrid}>
+    <div className={classes.testimonialItem}>
+      <img src={s1} alt="Person" className={classes.testimonialImage} />
+      <p className={classes.testimonialName}>Jack</p>
+      <p className={classes.testimonialComment}>"NN Engineers provided exceptional service. The quality of their work on our warehouse project was outstanding and completed on time."</p>
+    </div>
+    <div className={classes.testimonialItem}>
+      <img src={s2} alt="Person" className={classes.testimonialImage} />
+      <p className={classes.testimonialName}>Jane Smith</p>
+      <p className={classes.testimonialComment}>"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+    </div>
+    <div className={classes.testimonialItem}>
+      <img src={s3} alt="Person" className={classes.testimonialImage} />
+      <p className={classes.testimonialName}>Alice Johnson</p>
+      <p className={classes.testimonialComment}>"The team at NN Engineers was professional and reliable. They handled our factory shed fabrication with great attention to detail."</p>
+    </div>
+    <div className={classes.testimonialItem}>
+      <img src={s4} alt="Person" className={classes.testimonialImage} />
+      <p className={classes.testimonialName}>Bob Brown</p>
+      <p className={classes.testimonialComment}>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+    </div>
+  </div>
+</div>
+
+<InquiryForm />
+      <Footers />
     </div>
   );
 }

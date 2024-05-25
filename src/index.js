@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-//  import App from './App';
+    // import App from './App';
 // import App from './Footer';
-  //  import App from './About';
-// import App from './Menu';
+    // import App from './About';
+import App from './Menu';
 // import App from './Portfolio.module';
 // import App from './Vision.module';
 //  import  App from './header';
- import App from './Service';
+  //  import App from './Service';
 // import App from './society.module'
+// import App from './Searchbar';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

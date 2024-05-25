@@ -1,63 +1,89 @@
 // InquiryForm.js
 import React, { useState } from 'react';
-import classes from './Servicepage.module.css';
+import classes from './Inquiry.module.css';
 
 function InquiryForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: ''
   });
 
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    alert('Form submitted!');
+    // Handle form submission (e.g., send data to server or display a success message)
+    console.log('Form data submitted:', formData);
+    setIsSubmitted(true);
+    // Reset the form for new enquiry
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    });
   };
-
   return (
-    <section className={`${classes.section} ${classes.formContainer}`}>
-      <h2>Inquiry Form</h2>
-      <form onSubmit={handleSubmit}>
-        <div className={classes.formGroup}>
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className={classes.formGroup}>
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className={classes.formGroup}>
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+    <div className={classes.enquiry}>
+    <h2>Enquiry Form</h2>
+    <form className={classes.enquiryForm} onSubmit={handleSubmit}>
+      <label htmlFor="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
+
+      <label htmlFor="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
+
+      <label htmlFor="phone">Phone</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        value={formData.phone}
+        onChange={handleChange}
+        required
+      />
+
+      <label htmlFor="message">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        value={formData.message}
+        onChange={handleChange}
+        required
+      ></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+    {isSubmitted && (
+      <div className={classes.thankYouNote}>
+        <p>Thank you for your enquiry! We will get back to you soon.</p>
+      </div>
+    )}
+  </div>
   );
 }
 

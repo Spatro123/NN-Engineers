@@ -158,7 +158,7 @@ function App() {
       
         <div className={classes.block}>
           <h1 className={classes.secondBlockHeader}>Company</h1>
-          <h2 className={classes.secondBlockSubheader}>NN Engineers</h2>
+          <h2 className={classes.secondBlockSubheader}>NN ENGINEERS</h2>
           <button className={classes.knowMoreButton}>KNOW MORE</button>
           <h2 className={classes.subheader}>
             Building Tomorrow's Infrastructure Today , Your Trusted Partner for

@@ -1,7 +1,7 @@
 .container {
   position: relative;
   width: 100%;
-  height: auto; 
+  height: auto;
   display: grid;
   justify-content: center;
   background-color: black;
@@ -34,7 +34,6 @@
   top: -40%;
   left: 650px;
   transform: rotate(8deg);
-
 }
 
 .stripedBackground.bottom {
@@ -42,17 +41,16 @@
   left: 200px;
   transform: rotate(-15deg);
   height: 35%;
-  width: calc(8% - 60px)
+  width: calc(8% - 60px);
 }
 
 .stripedBackground.middle {
   top: 34%;
   left: 260px;
- 
   height: 85%;
   transform: rotate(-160deg);
   margin-top: 18px;
-  width: calc(8% - 60px)
+  width: calc(8% - 60px);
 }
 
 .stripedBackground::before {
@@ -87,13 +85,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
+  padding: 2rem;
   box-sizing: border-box;
-  margin-top: 60px;
+  margin-top: 3rem;
   z-index: 1000;
   transition: transform 0.3s ease-in-out;
-  height: 100px;
-  padding: 60px;
+  height: 6rem;
 }
 
 .menuButton,
@@ -107,9 +104,9 @@
 
 .menuIcon,
 .searchIcon {
-  width: 60px;
-  height: 60px;
-  margin-right: 20px;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
@@ -125,7 +122,7 @@
 }
 
 .logo {
-  width: 400px;
+  width: 20rem;
   height: auto;
 }
 
@@ -144,7 +141,7 @@
 
 .textContainer {
   position: absolute;
-  right: 300px;
+  right: 15rem;
   top: 50%;
   transform: translateY(-50%);
   text-align: right;
@@ -153,8 +150,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 100px;
-
+  padding: 5rem;
 }
 
 .boldText {
@@ -175,34 +171,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
-  margin-right: 30px;
- 
+  margin-top: 5rem;
+  margin-right: 1.5rem;
 }
 
 .tagImage {
   position: absolute;
   opacity: 0;
   animation: fadeSequence 5s infinite;
-  margin-right: 250px;
+  margin-right: 12.5rem;
 }
 
 .textSequence {
   position: absolute;
   opacity: 0;
   animation: fadeSequence 5s infinite;
-  
   width: 100%;
-  
 }
 
 .tagImage {
   animation-delay: 5s;
-  height: 150px;
-  width: 150px;
-  margin-bottom: 20px;
-  margin-right: 50px;
-  margin-right: 200px;
+  height: 7.5rem;
+  width: 7.5rem;
+  margin-bottom: 1rem;
+  margin-right: 2.5rem;
+  margin-right: 10rem;
 }
 
 .textSequence:nth-child(2) {
@@ -253,7 +246,7 @@
 .visionText {
   position: absolute;
   top: 60%;
-  left: 50px;
+  left: 2.5rem;
   transform: translateY(-50%);
   color: rgba(255, 255, 255, 0.5);
   font-size: 3.5em;
@@ -262,13 +255,13 @@
 
 .textContainer {
   position: absolute;
-  right: 20px;
+  right: 1rem;
   top: 50%;
   transform: translateY(-50%);
   text-align: right;
   z-index: 2;
   font-size: 2em;
-  margin-right: 70px;
+  margin-right: 3.5rem;
   align-items: center;
 }
 
@@ -280,7 +273,7 @@
 
 .textContainer span {
   color: black;
-  margin-right: 70px;
+  margin-right: 3.5rem;
 }
 
 .block {
@@ -368,7 +361,7 @@
   top: 30%;
   left: 50%;
   transform: translateX(-50%);
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   font-size: 1em;
   background: none;
   color: grey;
@@ -393,20 +386,23 @@
 
 .fourthBlock h1 {
   font-size: 3em;
-  margin-bottom: 40px;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 2rem;
+  height: 2rem;
 }
 
+.serviceItem:hover {
+  color: white;
+}
 .serviceList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 2rem;
 }
 
 .serviceColumn {
@@ -414,7 +410,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 1.5rem;
 }
 
 .serviceItem {
@@ -422,12 +418,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px;
+  padding: 1.5rem;
   border-radius: 5px;
   text-align: center;
-  font-size: 20px;
-  width: 200px;
-  height: 100px;
+  font-size: 1rem;
+  width: 10rem;
+  height: 5rem;
 }
 
 .serviceItem:hover {
@@ -467,6 +463,7 @@
 .sixthBlock {
   text-align: center;
   height: 100vh;
+  margin-bottom: -4px; /* Added to remove gap */
 }
 
 .sixthBlock h1 {
@@ -586,18 +583,18 @@ body {
 
 @media (max-width: 768px) {
   .header {
-    height: 80px;
-    padding: 10px;
+    height: 4rem;
+    padding: 0.5rem;
   }
 
   .logo {
-    width: 150px;
+    width: 7.5rem;
   }
 
   .menuIcon,
   .searchIcon {
-    width: 30px;
-    height: 30px;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .textContainer {
@@ -617,7 +614,7 @@ body {
   }
 
   .knowMoreButton {
-    padding: 8px 16px;
+    padding: 0.4rem 0.8rem;
     font-size: 0.8em;
   }
 
@@ -631,24 +628,24 @@ body {
 
   .serviceList {
     flex-direction: column;
-    gap: 20px;
+    gap: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .header {
-    height: 60px;
-    padding: 5px;
+    height: 3rem;
+    padding: 0.25rem;
   }
 
   .logo {
-    width: 100px;
+    width: 5rem;
   }
 
   .menuIcon,
   .searchIcon {
-    width: 25px;
-    height: 25px;
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
   .textContainer {
@@ -668,7 +665,7 @@ body {
   }
 
   .knowMoreButton {
-    padding: 5px 10px;
+    padding: 0.25rem 0.5rem;
     font-size: 0.6em;
   }
 
@@ -682,7 +679,7 @@ body {
 
   .serviceList {
     flex-direction: column;
-    gap: 10px;
+    gap: 0.5rem;
   }
 }
 
@@ -692,9 +689,9 @@ body {
   }
 
   .serviceItem {
-    width: 150px;
-    height: 150px;
-    font-size: 16px;
+    width: 7.5rem;
+    height: 7.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -704,8 +701,8 @@ body {
   }
 
   .serviceItem {
-    width: 100px;
-    height: 100px;
-    font-size: 14px;
+    width: 5rem;
+    height: 5rem;
+    font-size: 0.875rem;
   }
 }
