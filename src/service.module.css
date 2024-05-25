@@ -1,204 +1,238 @@
-.container {
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .container {
     width: 100%;
     font-family: Arial, sans-serif;
     background-color: black;
-}
-
-.hero {
+  }
+  
+  .hero {
     position: relative;
     text-align: center;
     color: white;
-}
-
-.heroImage {
+  }
+  
+  .heroImage {
     width: 100%;
     height: 100vh;
     object-fit: cover; 
-}
-
-.heroText {
+  }
+  
+  .heroText {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 4em;
     font-weight: bold;
-}
-
-.services {
+  }
+  
+  .services {
     padding: 20px;
-    background: linear-gradient(to bottom, #000000, #333333);
-}
-
-.services h2 {
+    background: black;
+    transition: background 0.5s ease;
+  }
+  
+  .services h2 {
     font-size: 2em;
     margin-bottom: 20px;
     color: white;
-}
-
-.serviceGrid {
+  }
+  
+  .serviceGrid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-}
-
-.serviceItem {
+  }
+  
+  .serviceItem {
     flex: 1 1 calc(33.333% - 20px);
     text-align: center;
     background: #222222;
-    width: calc(33.333% - 20px); /* Ensures the width is correct */
+    width: calc(33.333% - 20px); 
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: white;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-    height: 200px; /* Ensures the boxes are square */
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.serviceItem:hover {
+  }
+  
+  .serviceItem:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     background: linear-gradient(145deg, #333333, #555555);
-}
-
-.serviceItem img {
+  }
+  
+  .serviceItem img {
     width: 80px;
     height: 80px;
     object-fit: cover;
     margin-bottom: 10px;
     border-radius: 50%;
     border: 2px solid white;
-}
-
-.serviceItem p {
+  }
+  
+  .serviceItem p {
     font-size: 1em;
     margin: 0;
-}
-
-.testimonials {
+  }
+  
+  .testimonials {
     padding: 20px;
-    background: linear-gradient(to top, #000000, #333333);
+    background: black;
+    transition: background 0.5s ease;
     height: 600px;
-}
-
-.testimonials h2 {
+  }
+  
+  .testimonials h2 {
     font-size: 2em;
     margin-bottom: 20px;
     color: white;
     text-align: center;
-}
-
-.testimonialGrid {
+  }
+  
+  .testimonialGrid {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-}
-
-.testimonialItem {
+  }
+  
+  .testimonialItem {
     text-align: center;
     background-color: white;
     padding: 20px;
     border: 2px solid grey;
     height: 300px;
-    width: 400px;
+    width: 100%;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.testimonialItem:hover {
+  }
+  
+  .testimonialItem:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.testimonialFrame {
-    border: 2px solid grey;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.testimonialImage {
+  }
+  
+  .testimonialImage {
     width: 80px;
     height: 80px;
     object-fit: cover;
     border-radius: 50%;
     margin: 0 auto 10px;
-    border: 1px solid white;
-}
-
-.testimonialName {
+    border: 1px solid grey;
+  }
+  
+  .testimonialName {
     font-weight: bold;
-    color: rgb(0, 0, 0);
+    color: black;
     margin-bottom: 5px;
-}
-
-.testimonialComment {
+  }
+  
+  .testimonialComment {
     font-style: italic;
-    color: rgb(0, 0, 0);
+    color: black;
     margin: 0;
-}
-
-@media (max-width: 1200px) {
+  }
+  
+ 
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  }
+  @media (max-width: 1200px) {
     .heroText {
-        font-size: 3em;
+      font-size: 3em;
     }
-
+  
     .services h2 {
-        font-size: 1.75em;
+      font-size: 1.75em;
     }
-
+  
     .serviceItem {
-        flex: 1 1 calc(50% - 20px);
-        height: 200px;
+      flex: 1 1 calc(50% - 20px);
+      height: 200px;
     }
-}
-
-@media (max-width: 992px) {
+  
+    .testimonialItem {
+      width: 48%;
+    }
+  }
+  
+  @media (max-width: 992px) {
     .heroText {
-        font-size: 2.5em;
+      font-size: 2.5em;
     }
-
+  
     .services h2 {
-        font-size: 1.5em;
+      font-size: 1.5em;
     }
-
+  
     .serviceItem {
-        flex: 1 1 calc(50% - 20px);
-        height: 200px;
+      flex: 1 1 calc(50% - 20px);
+      height: 200px;
     }
-}
-
-@media (max-width: 768px) {
+  
+    .testimonialItem {
+      width: 48%;
+    }
+  }
+  
+  @media (max-width: 768px) {
     .heroText {
-        font-size: 2em;
+      font-size: 2em;
     }
-
+  
     .services h2 {
-        font-size: 1.25em;
+      font-size: 1.25em;
     }
-
+  
     .serviceItem {
-        flex: 1 1 calc(50% - 20px);
-        height: 200px;
+      flex: 1 1 calc(50% - 20px);
+      height: 200px;
     }
-}
-
-@media (max-width: 576px) {
+  
+    .testimonialItem {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
     .heroText {
-        font-size: 1.5em;
+      font-size: 1.5em;
     }
-
+  
     .services h2 {
-        font-size: 1em;
+      font-size: 1em;
     }
-
+  
     .serviceItem {
-        flex: 1 1 100%;
-        height: 200px;
+      flex: 1 1 100%;
+      height: 200px;
     }
-}
+  
+    .testimonialItem {
+      width: 100%;
+    }
+  }
+  
