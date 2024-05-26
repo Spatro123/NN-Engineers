@@ -43,11 +43,32 @@ import t4 from "./instagram.png";
 import t5 from "./facbook(1).png";
 import t6 from "./linkedin.png";
 
+import a1 from './tata.png';
+import a2 from './indianoil.png';
+import a3 from './Aditya.png';
+import a4 from './AMNS.png';
+import a5 from './imfa.jpg';
+import a6 from './mittal.png';
+import a7 from './igkc.png';
+import a8 from './jindal.png';
+import a9 from './jsw.png';
+import a10 from './bgu.png';
+import a11 from './bimtech.jpeg';
+import a12 from './cpwd.png';
+import a13 from './dion.png';
+import a14 from './essar.png';
+import a15 from './gail.png';
+import a16 from './gupta.png'
+import a17 from './pwd.png';
+import a18 from './Sri.png';
+import a19 from './vedant.png';
+
 function App() {
   const images = [image1, image3, image4, image5, image6];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [isFirstBlock, setIsFirstBlock] = useState(true); // Flag to identify the first block
+  const [isMenuVisible, setIsMenuVisible] = useState(false); // State to toggle menu
 
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -86,8 +107,22 @@ function App() {
   };
 
   const handleMenuClick = () => {
-    // Logic to toggle menu visibility
+    setIsMenuVisible(!isMenuVisible);
   };
+
+  const [currentClientIndex, setCurrentClientIndex] = useState(0);
+  const clients = [
+    a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11,
+    a12, a13, a14, a15, a16, a17, a18, a19
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentClientIndex((prevIndex) => (prevIndex + 1) % clients.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [clients.length]);
 
   return (
     <div className={classes.container}>
@@ -113,23 +148,21 @@ function App() {
             <img src={icon} alt="Menu Icon" className={classes.menuIcon} />
           </button>
         </div>
+        {isMenuVisible && <Menu />} {/* Render the Menu component */}
       </div>
       <div className={classes.firstBlock}>
         {isFirstBlock && (
           <>
-           
             <div className={`${classes.stripedBackground} ${classes.middle}`}></div>
             <div className={`${classes.stripedBackground} ${classes.bottom}`}></div>
           </>
         )}
-
         <div className={classes.textContainer}>
           <div className={classes.boldText}>Committed</div>
           <span>To Excellence</span>
           <div className={classes.sequenceContainer}>
             <img src={p4} alt="Tag" className={classes.tagImage} />
             <div className={classes.textSequence}>Pre Engineered Building</div>
-            
           </div>
         </div>
         <div className={classes.tagline}>
@@ -155,7 +188,6 @@ function App() {
           Your browser does not support the video tag.
         </video>
         <div className={classes.overlay}></div>
-      
         <div className={classes.block}>
           <h1 className={classes.secondBlockHeader}>Company</h1>
           <h2 className={classes.secondBlockSubheader}>NN ENGINEERS</h2>
@@ -234,10 +266,12 @@ function App() {
             </div>
           </div>
           <div className={classes.serviceColumn}>
+            {/*  
             <div className={classes.serviceItem}>
               <img src={s14} alt="Icon" className={classes.icon} />
               Technical Advisory Service
             </div>
+            */}
           </div>
         </div>
       </div>
@@ -251,18 +285,35 @@ function App() {
         <img src={b4} className={classes.image} alt="People Background" />
       </div>
 
+
       <div className={classes.sixthBlock}>
-        <div className={classes.imageTextContainer}>
-          <h1>Our Projects</h1>
-          <img src={b5} className={classes.image1} alt="Commitment" />
-          <div className={classes.overlayText}>
-            <p>
-              Our Commitment to Excellence Provides unmatched product quality,
-              coupled with speed, safety, and superior sales services.
-            </p>
-          </div>
-        </div>
-      </div>
+  <h1>Our Clients</h1>
+  <div className={classes.clientImages}>
+    <img src={a1} alt="Client 1" className={classes.clientImage} />
+    <img src={a2} alt="Client 2" className={classes.clientImage} />
+    <img src={a3} alt="Client 3" className={classes.clientImage} />
+    <img src={a4} alt="Client 4" className={classes.clientImage} />
+    <img src={a5} alt="Client 5" className={classes.clientImage} />
+    <img src={a6} alt="Client 6" className={classes.clientImage} />
+    <img src={a7} alt="Client 7" className={classes.clientImage} />
+    <img src={a8} alt="Client 8" className={classes.clientImage} />
+    <img src={a9} alt="Client 9" className={classes.clientImage} />
+    <img src={a10} alt="Client 10" className={classes.clientImage} />
+    <img src={a11} alt="Client 11" className={classes.clientImage} />
+    <img src={a12} alt="Client 12" className={classes.clientImage} />
+    <img src={a13} alt="Client 13" className={classes.clientImage} />
+    <img src={a14} alt="Client 14" className={classes.clientImage} />
+    <img src={a15} alt="Client 15" className={classes.clientImage} />
+    <img src={a16} alt="Client 16" className={classes.clientImage} />
+    <img src={a17} alt="Client 17" className={classes.clientImage} />
+    <img src={a18} alt="Client 18" className={classes.clientImage} />
+    <img src={a19} alt="Client 19" className={classes.clientImage} />
+  </div>
+</div>
+
+
+
+
       <Footer />
     </div>
   );

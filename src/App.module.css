@@ -459,47 +459,24 @@
   text-align: left;
   line-height: 2.5;
 }
-
 .sixthBlock {
   text-align: center;
   height: 100vh;
   margin-bottom: -4px; /* Added to remove gap */
+  background-color: black; /* Set background color to white */
+}
+.clientImages {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust as needed */
+  gap: 10px;
+  justify-items: center;
 }
 
-.sixthBlock h1 {
-  font-size: 2rem;
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.sixthBlock .imageTextContainer {
-  position: relative;
-  display: inline-block;
+.clientImage {
   max-width: 100%;
+  height: auto;
 }
 
-.sixthBlock .image1 {
-  width: 100%;
-  height: 100%;
-}
-
-.sixthBlock .overlayText {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2.5rem;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-}
 
 .blank {
   width: 100%;
