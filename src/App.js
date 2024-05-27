@@ -120,6 +120,7 @@ const App = () => {
 
   return (
     <div className={classes.container}>
+      {/*  
       <div
         className={classes.header}
         style={{
@@ -144,7 +145,7 @@ const App = () => {
         </div>
       </div>
 
-
+*/}
       <div className={classes.FirstBlock}>
         {/* <div className={classes.stripeBackground}> </div> */}
      

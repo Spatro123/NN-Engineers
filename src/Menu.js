@@ -13,6 +13,7 @@ function Menu() {
   return (
     <div className={classes.pageContainer}>
       <div className={classes.head}>
+ {/*
         <Link to="/" className={classes.logoContainer}>
           <img src={logo} alt="Logo" className={classes.logo} />
         </Link>
@@ -21,6 +22,7 @@ function Menu() {
             CLOSE
           </Link>
         </button>
+ */}
       </div>
 
       <div className={classes.menuContainer}>

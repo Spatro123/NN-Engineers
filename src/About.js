@@ -23,9 +23,9 @@ const CompanyProfile = () => {
 
     return (
         <div className={classes.companyProfile}>
-            <div className={classes.logoContainer}>
+            {/* <div className={classes.logoContainer}> 
                 <img src={logo} alt="Logo" className={classes.logo} />
-            </div>
+            </div>*/}
             <div className={classes.imageSection}>
                 <img src={pic} alt="Company Image" className={classes.fullWidthImage} />
                 <div className={classes.overlay}>

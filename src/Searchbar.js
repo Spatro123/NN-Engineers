@@ -6,9 +6,9 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = () => {
-    // Perform search operation using the searchQuery state
+   
     console.log("Searching for:", searchQuery);
-    // You can add your search logic here, like fetching data or filtering results
+    
   };
 
   const handleInputChange = (event) => {

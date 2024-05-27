@@ -6,30 +6,34 @@ import App from './App';
 import Menu from './Menu';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes correctly
 import Searchbar from './Searchbar';
-
-
+import  Header from './header';
+import About from './About';
+import Service from './Service';
+import Team from './team';
+import reportWebVitals from './reportWebVitals';
+import Layout from './Layout';
 // import App from './Footer';
-  import About from './About';
 
 // import App from './Portfolio.module';
 // import App from './Vision.module';
-//  import  App from './header';
-  import Service from './Service';
+
+  
 // import App from './society.module'
- import Team from './team';
-import reportWebVitals from './reportWebVitals';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/search" element={<Searchbar />} /> 
-        <Route path="/about" element={<About />} /> {/* Route to About component */}
-        <Route path="/services" element={<Service />} /> {/* Route to Services component */}
-        <Route path="/team" element={<Team />} /> {/* Route to Team component */}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<App />} />
+          <Route path="menu" element={<Menu />} />
+          <Route path="search" element={<Searchbar />} />
+          <Route path="about" element={<About />} />
+          <Route path="services" element={<Service />} />
+          <Route path="team" element={<Team />} />
+        </Route>
       </Routes>
     </Router>
   </React.StrictMode>
