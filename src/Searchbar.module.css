@@ -52,6 +52,13 @@ body {
     outline: none;
 }
 
+.App{
+    background-color: black;
+   
+    height: 100vh;
+
+}
+
 .searchbutton {
   
   
@@ -61,7 +68,12 @@ body {
     cursor: pointer;
  
 }
-
+.App button{
+    background: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
 .searchbutton img {
     width: 80px;
     height: 80px;

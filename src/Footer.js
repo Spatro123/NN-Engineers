@@ -122,6 +122,9 @@ function Footer() {
     <div className={classes.footerBottom}>
       © 2024 - NN Engineers. All rights reserved.
     </div>
+    <div className={classes.footerBottom}>
+      © powered by - DiracAI Private Limited
+    </div>
   
 </footer>
   );

@@ -19,7 +19,7 @@ function App() {
     <div className={classes.App}>
       <header className={classes.header}>
         <div className={classes.logo}>NN Engineers</div>
-        <div className={classes.closebutton}>CLOSE</div>
+        <button className={classes.closebutton}>CLOSE</button>
       </header>
       <div className={classes.searchcontainer}>
         <div>

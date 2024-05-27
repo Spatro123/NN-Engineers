@@ -4,6 +4,7 @@
     width: 100%;
     position: static;
     z-index: 1000;
+    color: white;
   }
   
   .menuContainer {
@@ -20,6 +21,12 @@
     list-style-type: none;
   }
   
+ .text{
+  
+  color: white;
+ }
+
+ 
   .logo {
     height: 200px;
     width: 500px;
@@ -30,6 +37,7 @@
     font-size: 20px;
     margin-right: 10px;
     margin-bottom: 40px;
+    color: white;
   }
   
   .menuItems li {
@@ -42,6 +50,31 @@
     font-size: 20px;
   }
   
+
+  .head{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+  }
+  .closebutton {
+    background: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    margin-right: 30px;
+    
+    cursor: pointer;
+  }
+
+.closeLink{
+
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+}
 
   .icon {
     width: 100px;

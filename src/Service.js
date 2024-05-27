@@ -3,6 +3,7 @@ import classes from './service.module.css';
 import Header from './header'; 
 import Footers from './Footer';
 import InquiryForm from './Inquiry';
+
 import p1 from './abc.jpg';
 import p2 from './r1.jpg';
 import p3 from './r2.jpg';
@@ -87,10 +88,12 @@ function ServicesPage() {
             <img src={p15} alt="Storage Solutions" className={classes.serviceIcon} />
             <p>Storage Solutions</p>
           </div>
+          {/*  
           <div className={classes.serviceItem}>
             <img src={p9} alt="Technical Advisory Service" className={classes.serviceIcon} />
             <p>Technical Advisory Service</p>
           </div>
+*/}
         </div>
       </div>
       <div className={classes.testimonials}>

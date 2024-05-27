@@ -1,8 +1,8 @@
 .companyProfile {
     width: 100%;
     overflow-x: hidden;
-    background-color: black;
-    
+    background-color: #121212;
+    color: #fff;
 }
 
 .logoContainer {
@@ -12,37 +12,41 @@
 }
 
 .logo {
-    height: 200px;
+    height: 10em; /* Adjust based on your design */
 }
 
 p {
     line-height: 1.6;
-    color: #555;
+    color: #bbb;
     text-align: justify;
-    margin: 0 20px;
+    margin: 0 1.5em;
     font-size: 1.2em;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
-    margin: 0 20px;
+    margin: 0 1.5em;
 }
 
 li {
-    padding-left: 20px;
+    padding-left: 1.5em;
     position: relative;
-    color: #555;
+    color: #bbb;
     text-align: left;
 }
 
 li::before {
     content: '•';
     display: inline-block;
-    width: 20px;
-    margin-left: -20px;
-    color: #2E3A59;
+    width: 1.5em;
+    margin-left: -1.5em;
+    color: #2e3a59;
     font-weight: bold;
+}
+
+.block2 {
+    background-color: rgb(24, 25, 25);
 }
 
 .imageSection {
@@ -50,14 +54,15 @@ li::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     margin: 0;
     padding: 0;
     transition: background-color 0.5s ease-in-out;
 }
 
-.fullWidthImage {
+.fullWidthImage,
+.fullWidthImage1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -67,10 +72,12 @@ li::before {
 .fullWidthImage:hover {
     transform: scale(1.05);
 }
-.icons{
-    height: 40px;
-    width: 40px;
+
+.icons {
+    height: 2.5em; /* Adjust based on your design */
+    width: 2.5em; /* Adjust based on your design */
 }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -86,14 +93,14 @@ li::before {
     color: rgba(255, 255, 255, 0.7);
     text-shadow: 2px 2px 4px #000;
     text-align: left;
-    margin-left: 60px;
-    padding: 20px;
+    margin-left: 5%;
+    padding: 1em;
 }
 
 .overlaySubText {
     position: absolute;
     top: 35%;
-    left: 100px;
+    left: 5%;
     font-size: 2em;
     color: rgba(158, 153, 153, 0.7);
     text-shadow: 2px 2px 4px #000;
@@ -101,7 +108,7 @@ li::before {
 
 .blank {
     width: 100%;
-    height: 100px;
+    height: 6.25em; /* Adjust based on your design */
     overflow: hidden;
     position: relative;
     background: linear-gradient(to top, #0c0b0b 10%, rgb(245, 182, 255) 150%);
@@ -111,24 +118,44 @@ li::before {
 .aboutSection {
     background-color: #0c0b0b;
     color: #fff;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     text-align: center;
-    margin: 0;
-    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1em;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    overflow: auto; /* Adds scrollbars if content overflows */
+    max-height: 100vh; /* Limits the maximum height of the section */
+    margin: 0 auto; /* Centers the section horizontally */
+}
+
+.aboutSection p,
+.aboutSection h2,
+.aboutSection li {
+    width: 90%; /* Adjust based on your design */
+    margin: 0 auto; /* Centers the text horizontally */
+}
+
+.aboutSection p {
+    font-size: 1.4em;
+    margin-bottom: 1em; /* Adds some space between paragraphs */
 }
 
 .aboutSection h2 {
-    font-size: 3em;
+    font-size: 2em;
     text-align: left;
-    color: grey;
+    color: rgb(97, 90, 90);
     font-weight: 400;
+}
+
+.aboutSection li {
+    font-size: 1.2em;
+    margin-bottom: 0.5em; /* Adds some space between list items */
 }
 
 .taglineSection {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100vh; /* Adjusted height to fit the animation better */
     overflow: hidden;
     text-align: center;
     color: #fff;
@@ -137,17 +164,7 @@ li::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid  grey;
-    
-}
-
-.taglineIcon {
-    width: 500px; 
-    height: 500px; 
-    margin-right: 10px; 
-    padding: 10px;
-    transition: transform 0.5s ease-in-out;
-    z-index: 4;
+    border-bottom: 1px solid grey;
 }
 
 .taglineTextContainer {
@@ -157,14 +174,22 @@ li::before {
 }
 
 .taglineText {
-    animation: slide 60s linear infinite;
+    animation: scroll 30s linear infinite;
     white-space: nowrap;
-    font-size: 15em; 
+    font-size: 4em;
     color: rgba(255, 255, 255, 0.7);
     text-shadow: 2px 2px 4px #000;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
 ::-webkit-scrollbar {
     width: 5px;
@@ -184,21 +209,17 @@ body {
     scrollbar-color: rgba(6, 6, 6, 0.2) transparent;
 }
 
-@keyframes slide {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
 @media (max-width: 768px) {
-    p, ul {
-        margin: 0 10px;
+    p,
+    ul {
+        margin: 0 1em;
     }
-    .aboutSection, .taglineSection, .visionSection, .missionSection, .valuesSection {
-        padding: 10px;
+    .aboutSection,
+    .taglineSection,
+    .visionSection,
+    .missionSection,
+    .valuesSection {
+        padding: 1em;
     }
     .overlayText {
         font-size: 3em;

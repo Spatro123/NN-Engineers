@@ -7,9 +7,6 @@ import pic from './p.jpg';
 import p3 from './vision.png';
 import p4 from './mission.png';
 import p5 from './benefits.png';
-import p6 from './an.png';
-import p7 from './an1.png';
-import p8 from './an2.png';
 
 const CompanyProfile = () => {
     const taglines = [
@@ -30,21 +27,20 @@ const CompanyProfile = () => {
                 <img src={logo} alt="Logo" className={classes.logo} />
             </div>
             <div className={classes.imageSection}>
-                <img src={pic} className={classes.fullWidthImage} />
+                <img src={pic} alt="Company Image" className={classes.fullWidthImage} />
                 <div className={classes.overlay}>
                     <h1 className={classes.overlayText}>ABOUT US</h1>
                     <p className={classes.overlaySubText}>Overview</p>
                 </div>
             </div>
-            {/*  
-            <div className={classes.blank}></div>
-            */}
             <div className={classes.aboutSection}>
+                <div className={classes.text}>
                 <h2>NN Engineers</h2>
-                <p>We are to introduce as NN Engineers, a leading PEB Manufacturer in Odisha. </p>
-                <p>In a very short span of time, NN Engineers has achieved great success in the PEB industry. </p>
-                <p>We also deal with Pipeline Fabrication, Hilti Anchoring Services, Industrial Structural Painting, Warehouse Shed Fabrication Services, Rooftop Installation Services, and Hilti Firestop Systems.</p>
-                <p>The company always delivers the best possible prices. You will get international standard services at very reasonable prices.</p>
+                <p>We are to introduce as NN Engineers, a leading PEB Manufacturer in Odisha. 
+                In a very short span of time, NN Engineers has achieved great success in the PEB industry.
+               We also deal with Pipeline Fabrication, </p>  <p>Hilti Anchoring Services, Industrial Structural Painting, Warehouse Shed Fabrication Services, Rooftop Installation Services, and Hilti Firestop Systems.
+                The company always delivers the best possible prices. </p>
+                <p>You will get international standard services at very reasonable prices.</p>
 
                 <div className={classes.visionSection}>
                     <h2><img src={p3} alt="Vision Icon" className={classes.icons} /> Vision</h2>
@@ -64,23 +60,21 @@ const CompanyProfile = () => {
                         <li><strong>Team Work:</strong> We actively share information and ideas, enthusiastically working to make those around us better.</li>
                         <li><strong>Diversity and Respect:</strong> The diversity of our workforce is an asset, and we treat everyone with dignity and respect regardless of status, gender, education, ethnicity, or religion.</li>
                     </ul>
+
+                </div>
+</div>
+            </div>
+            <div className={classes.block2}>
+                <div className={classes.imageSection}>
+                    <img src={s1} alt="NN Engineers Project" className={classes.fullWidthImage1} />
                 </div>
             </div>
-
-            <div className={classes.imageSection}>
-                <img src={s1} alt="NN Engineers Project" className={classes.fullWidthImage} />
-            </div>
-
             <div className={classes.taglineSection}>
-                <img src={p6} alt="Icon 1" className={classes.taglineIcon} />
-                <img src={p7} alt="Icon 2" className={classes.taglineIcon} />
-                <img src={p8} alt="Icon 3" className={classes.taglineIcon} />
                 <div className={classes.taglineTextContainer}>
                     <p className={classes.taglineText}>{taglines.join(' - ')}</p>
                 </div>
             </div>
-            
-            <Footer /> {/* Include Footer here */}
+            <Footer /> 
         </div>
     );
 }

@@ -1,7 +1,7 @@
-// InquiryForm.js
+
 import React, { useState } from 'react';
 import classes from './Inquiry.module.css';
-
+import "./App.css";
 function InquiryForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -22,10 +22,10 @@ function InquiryForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission (e.g., send data to server or display a success message)
+    
     console.log('Form data submitted:', formData);
     setIsSubmitted(true);
-    // Reset the form for new enquiry
+  
     setFormData({
       name: '',
       email: '',
