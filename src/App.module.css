@@ -83,7 +83,7 @@
   width: 50%;
   margin-left: auto;
   z-index: 3;
-  color: var(--themeColor);
+  color: rgb(56, 52, 52);
   font-weight: 700;
   display: flex;
   justify-content: center;
@@ -99,7 +99,7 @@
   width: 50%;
   margin-left: auto;
   z-index: 3;
-  color: var(--themeColor);
+  color: rgb(56, 52, 52);
   font-weight: 700;
   display: flex;
   justify-content: center;
@@ -483,8 +483,8 @@
   border-radius: 5px;
   text-align: center;
   font-size: 1rem;
-  width: 10rem;
-  height: 10rem;
+  width: 13rem;
+  height: 13rem;
   box-sizing: border-box;
 }
 

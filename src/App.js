@@ -13,7 +13,7 @@ import image3 from "./3.png";
 import image4 from "./4.png";
 import image7 from './5.png';
 import image5 from "./7.jpg";
-import image6 from "./6.jpg";
+import image6 from "./6.png";
 import p1 from "./P3.jpg";
 import p2 from "./p4.jpeg";
 import p3 from './N.png';
@@ -61,9 +61,8 @@ import a18 from './Sri.png';
 import a19 from './vedant.png';
 
 const App = () => {
-  const images = [image1, image3, image4, image7, ];
-  const stripeColors = ["red", "blue", "green", "yellow"]; // Define array of stripe colors
-  const animationDelay = 5;
+  const images = [image1, image2, image3,image4,image6];
+ 
    
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -149,8 +148,8 @@ const App = () => {
       <div className={classes.FirstBlock}>
         {/* <div className={classes.stripeBackground}> </div> */}
      
-       {/* <div className={classes.text}>COMMITTED TO</div> */}
-       {/* <div className={classes.text1}>Excellence</div> */}
+       <div className={classes.text}>COMMITTED TO</div> 
+        <div className={classes.text1}>Excellence</div> 
         {images.map((image, index) => (
             <img
               key={index}
